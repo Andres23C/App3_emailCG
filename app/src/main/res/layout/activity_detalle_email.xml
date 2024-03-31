@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#007a28"
+        android:padding="18dp"
+        android:text="Mi Email"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp" />
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:contentDescription="Image"
+        android:src="@drawable/usuario_leido" />
+
+    <TextView
+        android:id="@+id/senderTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Remitente:"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp" />
+
+    <TextView
+        android:id="@+id/emTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:textSize="20dp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fecha:"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/subjectTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Asunto:"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/contentTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mensaje:"
+        android:textSize="20dp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="40dp" />
+
+    <!-- Layout para organizar botones en dos filas -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <!-- Botones de arriba -->
+        <Button
+            android:id="@+id/responderButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#007a28"
+            android:textColor="@color/white"
+            android:text="Responder"
+            android:textSize="20dp"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/reenviarButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#007a28"
+            android:textColor="@color/white"
+            android:text="Reenviar"
+            android:textSize="20dp"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <!-- 2do Layout horizontal-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="7dp"
+        android:weightSum="2">
+
+        <!-- Botones de abajo -->
+        <Button
+            android:id="@+id/destacarButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#007a28"
+            android:textColor="@color/white"
+            android:text="Destacar"
+            android:textSize="20dp"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/eliminarButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#007a28"
+            android:textColor="@color/white"
+            android:text="Eliminar"
+            android:textSize="20dp"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+</LinearLayout>

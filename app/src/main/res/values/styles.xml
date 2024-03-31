@@ -1,0 +1,25 @@
+<resources>
+    <!-- Definir el color primario y el color de fondo de la aplicación -->
+    <color name="colorPrimary">@color/readEmailBackground</color>
+    <color name="colorPrimaryDark">@color/color_app</color>
+    <color name="colorAccent">#123201</color>
+    <color name="colorBackground">#FFFFFF</color>
+
+    <!-- Definir el estilo de la barra de acción -->
+    <style name="AppThemeCG" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Color de la barra de acción -->
+        <item name="colorPrimary">@color/readEmailBackground</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Color de fondo de la actividad -->
+        <item name="android:windowBackground">@color/colorBackground</item>
+    </style>
+
+    <style name="App3" parent="Theme.App3_emailCG">
+        <item name="colorPrimary">@color/color_app</item>
+        <item name="colorPrimaryDark">#4CAF50</item>
+        <item name="colorAccent">#0D2300</item>
+    </style>
+
+<!--TEMA ORIGINAL"@style/Theme.App3_emailCG"-->
+</resources>
