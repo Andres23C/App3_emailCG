@@ -95,7 +95,6 @@ public class EmailAdapter extends RecyclerView.Adapter<EmailAdapter.ViewHolder> 
         });
     }
 
-
     @Override
     public int getItemCount() {
         return emailList.size();

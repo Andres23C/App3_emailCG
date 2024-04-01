@@ -3,6 +3,8 @@ package com.app3_emailcg;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.List;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -57,4 +59,35 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private int contadorNotificacionesNoLeidas = 0; // Almacenar el contador de notificaciones no leídas
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        actualizarContadorNotificaciones();
+    }
+
+    private void actualizarContadorNotificaciones() {
+        // Contar el número de correos no leídos
+        contadorNotificacionesNoLeidas = contarCorreosNoLeidos();
+        // Mostrar un Toast con el valor del contador actualizado
+        mostrarContadorNotificaciones();
+    }
+
+    // Método para contar los correos no leídos
+    private int contarCorreosNoLeidos() {
+        int contador = 0;
+        for (Email email : emailList) {
+            if (!email.isRead()) {
+                contador++;
+            }
+        }
+        return contador;
+    }
+
+    // Método para mostrar el contador de notificaciones no leídas
+    private void mostrarContadorNotificaciones() {
+        // Mostrar un Toast con el valor del contador de notificaciones no leídas
+        Toast.makeText(this, "Notificaciones no leídas: " + contadorNotificacionesNoLeidas, Toast.LENGTH_SHORT).show();
+    }
 }
